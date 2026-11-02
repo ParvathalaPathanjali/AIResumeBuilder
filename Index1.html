@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>AI Resume Builder</h1>
+        <p>Create ATS-Friendly Professional Resume in Seconds</p>
+    </div>
+
+    <form id="resumeForm">
+        <div class="section">
+           <h2>Personal Details</h2>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Full Name"
+                required
+            >
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="Phone Number"
+                required
+            >
+
+            <input
+                type="text"
+                id="linkedin"
+                name="linkedin"
+                placeholder="LinkedIn URL (Optional)"
+            >
+
+            <input
+                type="text"
+                id="github"
+                name="github"
+                placeholder="GitHub URL (Optional)"
+            >
+
+        </div>
+        <div class="section">
+
+            <h2>Education</h2>
+
+            <h3>School</h3>
+
+            <input
+                type="text"
+                id="school"
+                placeholder="School Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="schoolMarks"
+                placeholder="CGPA / Percentage"
+                required
+            >
+
+            <input
+                type="number"
+                id="schoolYear"
+                placeholder="Passout Year"
+                required
+            >
+
+            <h3>Intermediate / Diploma</h3>
+
+            <input
+                type="text"
+                id="inter"
+                placeholder="College Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="interMarks"
+                placeholder="CGPA / Percentage"
+                required
+            >
+
+            <input
+                type="number"
+                id="interYear"
+                placeholder="Passout Year"
+                required
+            >
+
+            <h3>Graduation</h3>
+
+            <input
+                type="text"
+                id="graduation"
+                placeholder="Degree & College"
+                required
+            >
+
+            <input
+                type="text"
+                id="graduationMarks"
+                placeholder="CGPA"
+                required
+            >
+
+            <input
+                type="number"
+                id="graduationYear"
+                placeholder="Passout Year"
+                required
+            >
+
+        </div>
+        <div class="section">
+
+            <h2>Skills</h2>
+
+            <input
+                type="text"
+                id="skills"
+                placeholder="Minimum 3 Skills (comma separated)"
+                required
+            >
+
+        </div>
+        <div class="section">
+
+            <h2>Projects</h2>
+
+            <input
+                type="text"
+                id="project"
+                placeholder="Project Title / Description"
+                required
+            >
+
+        </div>
+
+        <div class="section">
+
+            <h2>Internship</h2>
+
+            <select id="internship">
+
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+
+            </select>
+
+            <input
+                type="text"
+                id="internRole"
+                placeholder="Role"
+            >
+
+            <input
+                type="text"
+                id="internCompany"
+                placeholder="Company"
+            >
+
+            <input
+                type="text"
+                id="internDuration"
+                placeholder="Duration"
+            >
+        </div>
+        <div class="section">
+
+            <h2>Work Experience (Optional)</h2>
+
+            <input
+                type="text"
+                id="workRole"
+                placeholder="Role"
+            >
+
+            <input
+                type="text"
+                id="workCompany"
+                placeholder="Company"
+            >
+
+            <input
+                type="text"
+                id="workDuration"
+                placeholder="Duration"
+            >
+
+        </div>
+
+        <!-- Certifications -->
+        <div class="section">
+
+            <h2>Certifications</h2>
+
+            <select id="certificate">
+
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+
+            </select>
+
+            <input
+                type="text"
+                id="certificateName"
+                placeholder="Certification Name"
+            >
+
+        </div>
+
+        <!-- Achievements -->
+        <div class="section">
+
+            <h2>Achievements</h2>
+
+            <select id="achievement">
+
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+
+            </select>
+
+            <input
+                type="text"
+                id="achievementDetails"
+                placeholder="Achievement Details"
+            >
+
+        </div>
+
+        <!-- Languages -->
+        <div class="section">
+
+            <h2>Languages</h2>
+
+            <input
+                type="text"
+                id="languages"
+                placeholder="Languages Known (comma separated)"
+                required
+            >
+
+        </div>
+
+        <button type="submit">
+            Generate Resume
+        </button>
+
+    </form>
+
+    <div id="output" class="section" style="display:none; margin-top:30px;">
+        <h2>Generated Resume</h2>
+        <pre id="resumeText"></pre>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
